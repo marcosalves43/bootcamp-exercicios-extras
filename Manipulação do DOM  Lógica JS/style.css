@@ -1,0 +1,17 @@
+body {
+  font-size: 18px;
+}
+
+.selecionado {
+  color: green;
+}
+
+li:hover {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button {
+  display: block;
+  margin-top: 20px;
+}
