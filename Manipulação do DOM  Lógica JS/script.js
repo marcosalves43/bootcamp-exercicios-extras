@@ -32,20 +32,17 @@ function escolherItem(elemento) {
 function confirmarPremio() {
   const selecionado = document.querySelector(".selecionado");
 
-
   if (!selecionado) {
     alert("Você precisa escolher um prêmio");
     return;
   }
 
-  const naoEscolhidos = [];
+  const resultado = document.getElementById("resultado");
+  resultado.innerHTML = "";
 
-  itens.forEach((item) => {
-    if (!item.classList.contains("selecionado")) {
-      naoEscolhidos.push(item.innerText);
-    }
-  });
-
-  alert("Prêmios não escolhidos: " + naoEscolhidos.join(", "));
+  const p = document.createElement("p");
+  p.textContent = selecionado.innerHTML;
+  resultado.appendChild(p);
 }
+
 
